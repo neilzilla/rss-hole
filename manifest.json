@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "RSS Hole",
+    "version": "1.0",
+  
+    "description": "Poops out feeds",
+  
+    "permissions": [
+      "storage",
+      "activeTab"
+    ],
+
+    "icons": {
+      "64": "icons/rss-button.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["rss.js"]
+      }
+    ],
+
+    "browser_action": {
+      "default_icon": "icons/rss-button.png",
+      "default_title": "RSS Hole",
+      "default_popup": "popup/rss.html"
+    }
+  }
+  
